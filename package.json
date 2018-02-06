@@ -1,7 +1,11 @@
 
 {
-  "name": "react-native-voicelayer-voice-layer",
+  "name": "react-native-voicelayer",
   "version": "1.0.0",
+  "author": {
+    "name": "Mohamed Camara GUEYE",
+    "email": "katakeynii@gmail.com"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
