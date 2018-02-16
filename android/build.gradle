@@ -48,6 +48,6 @@ dependencies {
   testCompile 'junit:junit:4.12'
   configurations.maybeCreate("default")
   artifacts.add("default", file('voicelayersdk.aar'))  
-  compile project(':voicelayersdk')
+  // compile project(':voicelayersdk')
 }
   
