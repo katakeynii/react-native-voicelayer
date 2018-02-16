@@ -29,14 +29,13 @@ android {
 repositories {
     mavenCentral()
     flatDir{
-        dirs 'voicelayersdk'
+        dirs 'libs'
     }
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
   compile fileTree(include: ['*.jar'], dir: 'libs')
-  compile fileTree(include: ["*.aar"], dir: 'voicelayersdk')
 
   compile 'com.google.firebase:firebase-messaging:10.0.1'
   compile 'com.android.support:appcompat-v7:23.+'
@@ -50,14 +49,14 @@ dependencies {
   compile 'com.squareup.okhttp3:okhttp:3.8.1'
   testCompile 'junit:junit:4.12'
    compile(name:'voicelayersdk', ext:'aar')
-  // configurations.maybeCreate("default")
-  // artifacts.add("default", file('voicelayersdk.aar'))  
+  configurations.maybeCreate("default")
+  artifacts.add("default", file('voicelayersdk.aar'))  
   // compile project(':voicelayersdk')
 }
-fileTree(dir: 'voicelayersdk', include: '**/*.aar')
-        .each { File file ->
-    dependencies.add("compile", [
-        name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name }, 
-        ext: 'aar'
-    ])
-}
+// fileTree(dir: 'voicelayersdk', include: '**/*.aar')
+//         .each { File file ->
+//     dependencies.add("compile", [
+//         name: file.name.lastIndexOf('.').with { it != -1 ? file.name[0..<it] : file.name }, 
+//         ext: 'aar'
+//     ])
+// }
